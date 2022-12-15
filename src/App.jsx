@@ -25,7 +25,7 @@ function App() {
         <h2>Deixe sua avaliação</h2>
         <p>Ficamos felizes com sua compra, avalie sua experiência abaixo</p>
       </div>
-      <div className="container">
+      <div className="formContainer">
         <p>etapas</p>
         <form onSubmit={(event) => changeStep(currentStep + 1, event)}>
           <div className="inputsContainer">
