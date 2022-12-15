@@ -12,11 +12,12 @@
 }
 
 .thanksContainer h3 {
-    margin-bottom: 1rem 0;
+    margin-bottom: 2rem 0;
 }
 
 .reviewData {
     text-align: left;
+    margin-top: 2rem 0;
 }
 
 .reviewData svg {

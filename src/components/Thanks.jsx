@@ -2,17 +2,26 @@ import { BsFillEmojiHeartEyesFill, BsFillEmojiSmileFill, BsFillEmojiNeutralFill,
 
 import './Thanks.css'
 
-const Thanks = () => {
+const Thanks = ({ data }) => {
+
+    const emojiData = {
+        unsatisfied: <BsFillEmojiFrownFill />,
+        neutral: <BsFillEmojiNeutralFill />,
+        satisfied: <BsFillEmojiSmileFill />,
+        very_satisfied: <BsFillEmojiHeartEyesFill />,
+    }
+
     return (
         <div className='thanksContainer'>
             <p>A sua opnião é muito importante!</p>
             <p>Para concluir a avaliação, clique no botão enviar agora.</p>
-            <h3>Aqui está o resumo da sua avaliação:</h3>
+            <h3>Aqui está o resumo da sua avaliação: {data.name}</h3>
             <p className="reviewData">
                 <span>Satisfação:</span>
+                {emojiData[data.review]}
             </p>
             <p className="reviewData">
-                <span>Comentário:</span>
+                <span>Comentário: {data.comment}</span>
             </p>
         </div>
     )
